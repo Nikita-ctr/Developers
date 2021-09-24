@@ -1,4 +1,4 @@
-package net.nik.security.sec.config;
+package net.nik.security.safety.config;
 
 import lombok.AllArgsConstructor;
 import net.nik.security.appuser.AppUserService;

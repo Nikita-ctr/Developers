@@ -1,4 +1,4 @@
-package net.nik.security.sec;
+package net.nik.security.safety;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
