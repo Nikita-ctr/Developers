@@ -6,18 +6,20 @@
     <thead>
     <tr>
         <th>Id</th>
-        <th>Title</th>
-        <th>Price</th>
-        <th>Date</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Hours</th>
+        <th>Birth</th>
         <th></th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="books : ${bookList}">
-        <td th:text="${books.getId()}"></td>
-        <td th:text="${books.getTitle()}"></td>
-        <td th:text="${books.getPrice()}"></td>
-        <td th:text="${#dates.format(books.dateOfIssue, 'dd-MMM-yyyy')}"></td>
+    <tr th:each="devs : ${devList}">
+        <td th:text="${devs.getId()}"></td>
+        <td th:text="${devs.getFirst_name()}"></td>
+        <td th:text="${devs.getLast_name()}"></td>
+        <td th:text="${devs.getProjectHours()}"></td>
+        <td th:text="${#dates.format(devs.getDateOfBirth(), 'dd-MMM-yyyy')}"></td>
     </tr>
     </tbody>
 </table>

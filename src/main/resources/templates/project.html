@@ -9,13 +9,13 @@
     <thead>
     <tr>
         <th>Id</th>
-        <th>Genre</th>
+        <th>Name</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="genres : ${genreList}">
-        <td th:text="${genres.getId()}"></td>
-        <td th:text="${genres.getGenre()}"></td>
+    <tr th:each="prods : ${prodList}">
+        <td th:text="${prods.getId()}"></td>
+        <td th:text="${prods.getName()}"></td>
     </tr>
     </tbody>
 </table>

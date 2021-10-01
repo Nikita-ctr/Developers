@@ -14,27 +14,30 @@ import java.util.Set;
 @Getter
 @Setter
 @AllArgsConstructor
-@Table(name = "books")
-public class Book {
+@Table(name = "developers")
+public class Developer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "TITLE", length = 90)
-    private String title;
+    @Column(name = "FIRST_NAME", length = 30)
+    private String first_name;
+
+    @Column(name = "LAST_NAME",length = 90)
+    private String last_name;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(updatable = false)
     @org.hibernate.annotations.CreationTimestamp
-    private Date dateOfIssue;
+    private Date dateOfBirth;
 
     @NotNull
-    @Column(name = "PRICE", length = 60)
-    private int price;
+    @Column(name = "PROJECT_HOURS", length = 60)
+    private int projectHours;
 
     @OneToMany
-    private Set<Genres> genres = new HashSet<>();
+    private Set<Project> projects = new HashSet<>();
 
-    public Book() {
+    public Developer() {
     }
 }

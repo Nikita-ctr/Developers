@@ -11,16 +11,16 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Genres {
+public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String genre;
+    private String name;
 
     @ManyToOne
-    private Book book;
+    private Developer developers;
 
-    public Genres() {
+    public Project() {
     }
 }

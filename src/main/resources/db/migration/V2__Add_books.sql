@@ -1,3 +1,3 @@
-insert into books (id,title,date_of_issue,price) values (1,'Title','2004-10-19','212');
+insert into developers (id,first_name,last_name,date_of_birth,project_hours) values (1,'Vlad','Vladov','2004-10-19','60');
 
-insert into genres (id,genre) values (1,'Poem');
+insert into project (id,name) values (1,'DevTools');
