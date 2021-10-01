@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <body>
-<h2>Success</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="books : ${bookList}">
+        <td th:text="${books.getId()}"></td>
+        <td th:text="${books.getTitle()}"></td>
+        <td th:text="${books.getPrice()}"></td>
+        <td th:text="${#dates.format(books.dateOfIssue, 'dd-MMM-yyyy')}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
