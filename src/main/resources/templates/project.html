@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+
+<style>
+    table {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 14px;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    th, td:first-child {
+        background: #AFCDE7;
+        color: white;
+        padding: 10px 20px;
+    }
+    th, td {
+        border-style: solid;
+        border-width: 0 1px 1px 0;
+        border-color: white;
+    }
+    td {
+        background: #D8E6F3;
+    }
+    th:first-child, td:first-child {
+        text-align: left;
+    }
+</style>
+
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
-<table>
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="prods : ${prodList}">
-        <td th:text="${prods.getId()}"></td>
-        <td th:text="${prods.getName()}"></td>
-    </tr>
-    </tbody>
-</table>
+        <h2>Prods</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="prods : ${prodList}">
+                <td th:text="${prods.id}"></td>
+                <td th:text="${prods.name}"></td>
+                <td>
+                    <a th:href="@{prod-delete/{id}(id=${prods.id})}">Delete</a>
+                </td>
 
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/prod-create">Create user</a></p>
+</div>
+</body>
 </body>
 </html>

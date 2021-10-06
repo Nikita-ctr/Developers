@@ -23,4 +23,11 @@ public class DeveloperService {
     public List<Developer> listAll(){
        return developerRepository.findAll();
     }
+    public Developer get(Long id){
+        return developerRepository.getById(id);
+    }
+    public void delete(Long id){
+        developerRepository.deleteById(id);
+    }
+
 }

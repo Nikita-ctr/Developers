@@ -24,4 +24,11 @@ public class ProjectService {
     public List<Project> listAll(){
        return projectRepository.findAll();
     }
+    public Project get(Long id){
+        return projectRepository.getById(id);
+    }
+    public void delete(Long id){
+        projectRepository.deleteById(id);
+    }
+
 }
