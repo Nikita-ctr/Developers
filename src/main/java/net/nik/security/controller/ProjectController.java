@@ -19,6 +19,7 @@ public class ProjectController {
     public ProjectController(ProjectService projectService) {
         this.projectService = projectService;
     }
+
     @GetMapping("/allProd")
     public String allProjects(Model model) {
         List<Project> projectList = projectService.listAll();

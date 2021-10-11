@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -18,8 +20,8 @@ public class Project {
 
     private String name;
 
-    @ManyToOne
-    private Developer developers;
+    @OneToMany(mappedBy = "project",cascade = CascadeType.ALL)
+    private Set<Developer> developers=new HashSet<>();
 
     public Project() {
     }
