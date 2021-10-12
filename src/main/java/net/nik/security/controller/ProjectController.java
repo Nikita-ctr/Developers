@@ -44,4 +44,17 @@ public class ProjectController {
         return "redirect:/allProd";
         }
 
+        @GetMapping("/prod-update/{id}")
+    public String updateProjectForm(@PathVariable ("id") Long id,Model model){
+            Project project=projectService.get(id);
+            model.addAttribute("project",project);
+            return "/project-update";
+        }
+
+        @PostMapping("/prod-update")
+    public String updateProject(Project project){
+        projectService.save(project);
+        return "redirect:/allProd";
+        }
+
 }

@@ -45,14 +45,19 @@
     </thead>
     <tbody>
     <tr th:each="devs : ${devList}">
-        <td th:text="${devs.getId()}"></td>
-        <td th:text="${devs.getFirst_name()}"></td>
-        <td th:text="${devs.getLast_name()}"></td>
-        <td th:text="${devs.getProjectHours()}"></td>
-        <td th:text="${#dates.format(devs.getDateOfBirth(), 'dd-MMM-yyyy')}"></td>
+        <td th:text="${devs.id}"></td>
+        <td th:text="${devs.first_name}"></td>
+        <td th:text="${devs.last_name}"></td>
+        <td th:text="${devs.projectHours}"></td>
+        <td th:text="${#dates.format(devs.dateOfBirth, 'dd-MMM-yyyy')}"></td>
     </tr>
+
+
     </tbody>
 </table>
+
+    <p><a href="/dev-create">Create Developer</a></p>
+
 </div>
 </body>
 

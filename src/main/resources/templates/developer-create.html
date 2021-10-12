@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Project</title>
+</head>
+<body>
+<form th:action="@{/dev-create}" th:object="${developer}" method="post">
+    <label for="id">Id</label>
+    <input type="text" th:field="*{id}" id="id" placeholder="id">
+
+    <p></p>
+
+    <label for="name">Name</label>
+    <input type="text" th:field="*{first_name}" id="name" placeholder="Name">
+
+    <p></p>
+
+    <label for="surname">Surname</label>
+    <input type="text" th:field="*{last_name}" id="surname" placeholder="Surname">
+
+    <p></p>
+
+    <label for="hours">Hours</label>
+    <input type="text" th:field="*{projectHours}" id="hours" placeholder="Hours">
+
+    <p></p>
+
+
+    <label for="birth">Birth</label>
+    <input type="text" th:field="*{dateOfBirth}" id="birth" placeholder="Birth">
+
+    <p></p>
+
+    <input type="submit" value="Create Developer">
+</form>
+</body>
+</html>
