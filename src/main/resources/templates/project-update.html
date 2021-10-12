@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>Create Project</title>
+</head>
+<body>
+<div align="center">
+<form action="#" th:action="@{/prod-update}" th:object="${project}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+    <br/>
+    <input type="submit" value="Update User">
+</form>
+</div>
+</body>
+</html>

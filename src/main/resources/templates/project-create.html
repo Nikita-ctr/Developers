@@ -6,6 +6,8 @@
 </head>
 <body>
 <form th:action="@{/prod-create}" th:object="${project}" method="post">
+    <label for="id">Id</label>
+    <input type="text" th:field="*{id}" id="id" placeholder="id">
     <label for="name">Name of Project</label>
     <input type="text" th:field="*{name}" id="name" placeholder="Name">
     <input type="submit" value="Create Prod">

@@ -32,6 +32,8 @@
 
 </head>
 <body>
+<div align="center">
+
         <h2>Prods</h2>
         <table>
             <thead>
@@ -47,14 +49,17 @@
                 <td th:text="${prods.name}"></td>
                 <td>
                     <a th:href="@{prod-delete/{id}(id=${prods.id})}">Delete</a>
+
+                    <a th:href="@{prod-update/{id} (id=${prods.id})}">Edit</a>
                 </td>
+
 
             </tr>
             </tbody>
         </table>
-    </div>
-    <p><a href="/prod-create">Create user</a></p>
+
+    <p><a href="/prod-create">Create Project</a></p>
 </div>
 </body>
-</body>
+
 </html>
